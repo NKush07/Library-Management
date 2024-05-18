@@ -1,0 +1,59 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/AddBook.css">
+    <title>Add Book</title>
+</head>
+<body>
+    <div class="home">
+
+        <nav>
+            <span>ADD NEW BOOK</span>
+        </nav>
+        <form action="AddBook" method="POST">
+            {% csrf_token %}
+        <div class="detail">
+
+            <div class="adding">
+                <label for="b_date">Date : </label>
+                <input type="date" name="b_date">
+            </div>
+
+            <div class="adding">
+                <label for="b_category">Category : </label>
+                <input type="text" placeholder="Category" name="b_category">
+            </div>
+
+            <div class="adding">
+                <label for="b_name">Name of Book : </label>
+                <input type="text" placeholder="Name of Book" name="b_name">
+            </div>
+
+            <div class="adding">
+                <label for="b_author">Author Name : </label>
+                <input type="text" placeholder="Author Name" name="b_author">
+            </div>
+
+            <div class="adding">
+                <label for="b_publish">Publisher Name : </label>
+                <input type="text" placeholder="Publisher Name" name="b_publish">
+            </div>
+
+            <div class="adding">
+                <label for="">Year : </label>
+                <input type="text" placeholder="Year" name="b_year">
+            </div>
+
+            <div class="adding">
+                <button>Add</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

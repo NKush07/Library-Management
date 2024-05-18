@@ -1,0 +1,33 @@
+{% block header %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/sidebar.css">
+    <title>Library Management System</title>
+</head>
+{% endblock %}
+{% block menu %}
+<body>
+    <div class="sidebar">
+        <div class="greet">Namaste! {{request.session.user_name}}</div>
+        <img src="../static/img/userpic.png" alt="">
+        <ul>
+            <li><a href="Home">Home</a></li>
+            <li><a href="AddBook">Add New Book</a></li>
+            <li><a href="ShowBook">Show Books</a></li>
+            <li><a href="AddRent">Rent a Book</a></li>
+            <li><a href="ShowRent">Rented Books</a></li>
+            <li><a href="About">About Us</a></li>
+        </ul>
+        <div class="log"><a href="logout">LogOut</a></div>
+    </div>
+{% endblock %}
+{% block content %}
+
+{% endblock %}
+{% block footer%}
+</body>
+</html>
+{% endblock %}

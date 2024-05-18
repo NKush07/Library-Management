@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <nav>
+        <span id="logo">Library</span>
+        <a href="signup">SignUp</a>
+    </nav>
+    
+    <form action="CheckLog" method="POST">
+    {% csrf_token %}    
+    <div class="container">
+        <div class="box">
+            <p class="text-center" style="color:red">{{Error}}</p>
+            <div class="log">LogIn</div>
+            
+            <label for="user_n">Username : </label>
+            <input type="text" name="user_n" placeholder="Username">
+
+            <label for="user_pass">Password : </label>
+            <input type="text" name="user_pass" placeholder="Password">
+
+            <button>Login</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
